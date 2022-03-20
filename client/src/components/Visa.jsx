@@ -37,20 +37,30 @@ const Visa = () => {
                     border: '2px solid #856868',
                     borderRadius:5,
                     }}>
-                        {(CardNumber.isDerty&& CardNumber.isLengt) && <div style={{color:'red'}}>!!</div>}
-                        <input type='text'onBlur={e=>CardNumber.onBlur(e)} onChange={(e)=>CardNumber.onChange(e)} value={CardNumber.value} maxLength="16" va placeholder='0000 0000 0000 0000'  />
+                        <div className='CardNumber'>
+                                 <input   type='text'onBlur={e=>CardNumber.onBlur(e)} onChange={(e)=>CardNumber.onChange(e)} value={CardNumber.value} maxLength="16" placeholder='0000 0000 0000 0000' />
+                       </div>
+
+
+                       <div className='mExpDate'>
+                                 <input   type='text'onBlur={e=>mExpDate.onBlur(e)} onChange={(e)=>mExpDate.onChange(e)} value={mExpDate.value} maxLength="2" placeholder='MM' />
+                       </div>
+
+                        <div className='eExpDate'> 
+                                 <input   type='text'onBlur={e=>eExpDate.onBlur(e)} onChange={(e)=>eExpDate.onChange(e)} value={eExpDate.value} maxLength="4" placeholder='EEEE' />
+                        </div>
+
+                        <div className='cvv'>
+                                 <input  type='text'onBlur={e=>cvv.onBlur(e)} onChange={(e)=>cvv.onChange(e)} value={cvv.value} maxLength="3"placeholder='cvv' />
+                        </div>
+
+                        <div className='Amount'>
+                                 <input   type='text'onBlur={e=>Amount.onBlur(e)} onChange={(e)=>Amount.onChange(e)} value={Amount.value} placeholder='Amount' />
+                        </div>
                       
-                        {(mExpDate.isDerty&& mExpDate.isLengt) && <div style={{color:'red'}}>!!</div>}   
-                        <input  type='text'onBlur={e=>mExpDate.onBlur(e)} onChange={(e)=>mExpDate.onChange(e)} value={mExpDate.value} maxLength="2" placeholder='MM' />
-                      
-                        {(eExpDate.isDerty&& eExpDate.isLengt) && <div style={{color:'red'}}>!!</div>}
-                        <input  type='text'onBlur={e=>eExpDate.onBlur(e)} onChange={(e)=>eExpDate.onChange(e)} value={eExpDate.value} maxLength="4" placeholder='EEEE' />
-                      
-                        {(cvv.isDerty&& cvv.isLengt) && <div style={{color:'red'}}>!!</div>}
-                        <input  type='text'onBlur={e=>cvv.onBlur(e)} onChange={(e)=>cvv.onChange(e)} value={cvv.value} maxLength="3"placeholder='cvv' />
-                      
-                        {(Amount.isDerty&& Amount.isLengt) && <div style={{color:'red'}}>!!</div>}
-                        <input   type='text'onBlur={e=>Amount.onBlur(e)} onChange={(e)=>Amount.onChange(e)} value={Amount.value} maxLength="16" placeholder='Amount' />
+                       
+                        
+                        
                 </Box>
                 <button 
                     disabled={!CardNumber.valid||!mExpDate.valid||!eExpDate.valid||!cvv.valid||!Amount.valid}

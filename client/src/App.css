@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+input{
+padding:10px
+}
+.mExpDate{
+ position:absolute;
+ top:200px;
+ left:30px;
+ width:10px
+}
+.mExpDate input{
+
+ width:10px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.eExpDate{
+position:absolute;
+top:200px;
+ left:80px;
+ width:35px
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.eExpDate input{
+ width:35px
 }
-
-.App-link {
-  color: #61dafb;
+.eExpDate imput{
+  width:10px
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cvv{
+position:absolute;
+top:160px;
+left:480px;
+}
+.cvv input{
+width:20px;
+}
+.CardNumber{
+position:absolute;
+top:100px;
+left:50px;
+}
+.CardNumber input{
+width:500px
+}
+.Amount{
+position:absolute;
+width:400px;
+top:250px;
+left:50px;
+}
+.Amount input{
+width:400px;
 }
