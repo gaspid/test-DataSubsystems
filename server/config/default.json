@@ -1,0 +1,4 @@
+{
+    "serverPORT" :5050,
+    "getURL":"mongodb+srv://user1:fQVV8Y4yhyBvOIaq@cloud.txjvu.mongodb.net/cloud?retryWrites=true&w=majority"
+}
